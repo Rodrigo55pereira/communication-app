@@ -1,0 +1,15 @@
+<mat-card>
+    <mat-card-content>
+        <section>
+            <h1>{{title}} {{titleChecado}}</h1>
+        </section>
+        <section>
+            <mat-form-field>
+                <input matInput placeholder="Your name" [(ngModel)]="name">
+            </mat-form-field>
+        </section>
+        <section>
+            <app-name [name]="name" (checado)="checado($event)"></app-name>
+        </section>
+    </mat-card-content>
+</mat-card>
